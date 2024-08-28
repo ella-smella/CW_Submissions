@@ -47,5 +47,5 @@ c = 3
 //Which of the above options correctly computes the average of total? Why do the other options not work?
 Option C works. 
 
-Option A does not work because it will first divide the total by 3 as an integer, then convert that integer into a double, which will produce an incorrect result. 
-Option B does not wotk because it divides the total by 3 as an integer, not as a double, which is incorrect. 
+Option A does not work because it will first divide the total by 3 as a truncated integer, then convert that integer into a double, which will produce an incorrect result. 
+Option B does not work because it divides the total by 3 as a truncated integer, not as a double, which is incorrect. 
