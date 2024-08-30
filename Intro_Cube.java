@@ -19,7 +19,7 @@ public class Intro_Cube {
 		double volume = side * side * side; 
 		
 //Printing Values
-		System.out.print("With a cube with a side length of " + (int)side + ", its surface " + (int)surfaceArea + " and the volume is " + (int)volume + ".");
+		System.out.print("With a cube with a side length of " + (int)side + ", its surface area is " + (int)surfaceArea + " and the volume is " + (int)volume + ".");
 		
 		
 	}
