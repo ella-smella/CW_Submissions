@@ -9,30 +9,26 @@
 //cigarParty(50, false) → true
 //cigarParty(70, true) → true
 public boolean cigarParty(int cigars, boolean isWeekend) {
-  if (isWeekend == true)
+  if (isWeekend)
   {
-    if (cigars < 40)
+    if (cigars >= 40)
     {
-      return false;
+      return true;
     }
     else
     {
-      return true;
+      return false;
     }
   }
   else
   {
-    if (cigars < 40)
+    if (cigars >= 40 && cigars <= 60)
     {
-      return false;
-    }
-    else if (cigars > 60)
-    {
-      return false;
+      return true;
     }
     else
     {
-      return true;
+      return false;
     }
   }
 }
