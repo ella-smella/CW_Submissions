@@ -59,30 +59,26 @@ public int dateFashion(int you, int date) {
 //squirrelPlay(95, false) → false
 //squirrelPlay(95, true) → true
 public boolean squirrelPlay(int temp, boolean isSummer) {
-  if (temp < 60)
+  if (isSummer)
   {
-    return false;
-  }
-  else if (isSummer == true)
-  {
-    if (temp > 100)
+    if (temp >= 60 && temp <= 100)
     {
-      return false;
+      return true;
     }
     else
     {
-      return true;
+      return false;
     }
   }
   else
   {
-    if (temp > 90)
+    if (temp >= 60 && temp <= 90)
     {
-      return false;
+      return true;
     }
     else
     {
-      return true;
+      return false;
     }
   }
 }
@@ -93,37 +89,38 @@ public boolean squirrelPlay(int temp, boolean isSummer) {
 //caughtSpeeding(65, false) → 1
 //caughtSpeeding(65, true) → 0
 public int caughtSpeeding(int speed, boolean isBirthday) {
-  if (isBirthday == false)
-  {
-    if (speed <= 60)
-    {
-      return 0;
-    }
-    else if (speed > 80)
-    {
-      return 2;
-    }
-    else
-    {
-      return 1;
-    }
-  }
-  else
+  if (isBirthday)
   {
     if (speed <= 65)
     {
       return 0;
     }
-    else if (speed > 85)
-    {
-      return 2;
-    }
-    else
+    else if (speed >= 66 && speed <= 85)
     {
       return 1;
     }
+    else
+    {
+      return 2;
+    }
+  }
+  else
+  {
+    if (speed <= 60)
+    {
+      return 0;
+    }
+    else if (speed >= 61 && speed <= 80)
+    {
+      return 1;
+    }
+    else
+    {
+      return 2;
+    }
   }
 }
+
 
 //sortaSum Exercise
 //Given 2 ints, a and b, return their sum. However, sums in the range 10..19 inclusive, are forbidden, so in that case just return 20.
@@ -132,19 +129,13 @@ public int caughtSpeeding(int speed, boolean isBirthday) {
 //sortaSum(10, 11) → 21
 public int sortaSum(int a, int b) {
   int realSum = a + b;
-  if (realSum >= 10)
+  if (realSum >= 10 && realSum <= 19)
   {
-    if (realSum <20)
-    {
-      return 20;
-    }
-    else
-    {
-      return realSum;
-    }
+    return 20;
   }
   else
   {
     return realSum;
   }
 }
+
