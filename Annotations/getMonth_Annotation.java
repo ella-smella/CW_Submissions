@@ -1,7 +1,7 @@
 	/*
 	 * This method returns a String name of a month that corresponds with the int number that is passed. 
 	 * EX: January = 1; February = 2; March = 3...
-	 * If the method is passed a number that isn't 1-12
+	 * If the method is passed a number that isn't 1-12 it returns a blank String/space 
 	*/
 	public static String getMonth(int n)
 		{
