@@ -58,7 +58,7 @@
 			System.out.println("Please input a double to add to the sphere's radius.");
 			
 			//Sets the user's input as a double variable that will be added to the sphere's radius
-			Double input = new Double(myReader.nextLine());
+			Double input = new Double(myReader.nextDouble());
 			
 			//adds the user's input to the new radius 
 			newRadius += input;
