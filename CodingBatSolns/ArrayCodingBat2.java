@@ -89,23 +89,13 @@ public int sum2(int[] nums) {
 //middleWay([7, 7, 7], [3, 8, 0]) → [7, 8]
 //middleWay([5, 2, 9], [1, 4, 5]) → [2, 4]
 
-public int sum2(int[] nums) {
-  int[] copyArr = nums;
-  int sum;
+public int[] middleWay(int[] a, int[] b) {
+  int[] middleArr = new int [2];
   
-  if (nums.length == 0)
-  {
-    return 0;
-  }
+  middleArr[0] = a[1];
+  middleArr[1] = b[1];
   
-  if (nums.length == 1)
-  {
-    return nums[0];
-  }
-  
-  sum = copyArr[0] + copyArr[1];
-  return sum;
-  
+  return middleArr;
 }
 
 //makeEnds Exercise
