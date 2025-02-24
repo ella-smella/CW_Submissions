@@ -5,6 +5,7 @@ public class AlgorithmsProject {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 	}
 	
 	//Create methods that are passed an array of ints and accomplish the following tasks:
@@ -150,8 +151,9 @@ public class AlgorithmsProject {
 			}
 		}
 		
-		//returns the copyArr
-		return copyArr;
+		//makes nums equal to copyArr and returns it
+		nums = copyArr;
+		return nums;
 	}
 	
 	/**
@@ -227,8 +229,9 @@ public class AlgorithmsProject {
 			copyArr[j] = nums[i];
 		}
 		
-		//returns the copyArr
-		return copyArr;
+		//makes nums equal to copyArr and returns it
+		nums = copyArr;
+		return nums;
 	}
 	
 	/**
@@ -251,8 +254,9 @@ public class AlgorithmsProject {
 			copyArr[i] = nums[i - 1];
 		}
 		
-		//returns the copyArr
-		return copyArr;
+		//makes nums equal to copyArr and returns it
+		nums = copyArr;
+		return nums;
 	}
 			
 	/**
@@ -272,23 +276,20 @@ public class AlgorithmsProject {
 		}
 		
 		//for loop that traverses through each element of the copyArr except for the first one to avoid out of bounds error
-		for(int i = 1; i < nums.length; i ++)
+		for(int i = 1; i < nums.length; i++)
 		{
 			//for loop that traverses through each element left of the current element 
-			for(int j = i - 1; i >= 0; j--)
+			for(int j = i; j > 0 && copyArr[j] < copyArr[j - 1]; j--)
 			{
-				//if statement to check if the element is greater than the current element
-				if (j > i)
-				{
-					//swaps the two elements
-					int temp = copyArr[j];
-					copyArr[j] = copyArr[i];
-					copyArr[i] = temp;
-				}
+				//swaps the two elements
+				int temp = copyArr[j];
+				copyArr[j] = copyArr[j - 1];
+				copyArr[j - 1] = temp;
 			}
 		}
 		
-		//returns the copyArr
-		return copyArr;
+		//makes nums equal to copyArr and returns it
+		nums = copyArr;
+		return nums;
 	}
 }
