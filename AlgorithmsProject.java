@@ -130,29 +130,19 @@ public class AlgorithmsProject {
 	 */
 	public static int[] doubleFives(int[] nums)
 	{
-		//creates a copy array that is the same length as the passed array
-		int[] copyArr = new int [nums.length];
-		
-		//makes every element of the copy array the same as the passed array
-		for (int i = 0; i < nums.length; i++)
-		{
-			copyArr[i] = nums[i];
-		}
-		
 		//for loop that traverses through every element of the copyArr except for the last one to avoid an out of bounds error
 		for (int i = 0; i < nums.length - 1; i++)
 		{
 			//if statement to check if the current element and the one after it is both equal to 5
-			if (copyArr[i] == 5 && copyArr[i + 1] == 5)
+			if (nums[i] == 5 && nums[i + 1] == 5)
 			{
 				//sets the elements to 0
-				copyArr[i] = 0;
-				copyArr[i + 1] = 0;
+				nums[i] = 0;
+				nums[i + 1] = 0;
 			}
 		}
 		
-		//makes nums equal to copyArr and returns it
-		nums = copyArr;
+		//returns nums
 		return nums;
 	}
 	
@@ -266,30 +256,20 @@ public class AlgorithmsProject {
 	 */
 	public static int[] insertionSort (int[] nums)
 	{
-		//creates a copy array that is the same length as the passed array
-		int[] copyArr = new int [nums.length];
-		
-		//makes every element of the copy array the same as the passed array
-		for (int i = 0; i < nums.length; i++)
-		{
-			copyArr[i] = nums[i];
-		}
-		
 		//for loop that traverses through each element of the copyArr except for the first one to avoid out of bounds error
 		for(int i = 1; i < nums.length; i++)
 		{
 			//for loop that traverses through each element left of the current element 
-			for(int j = i; j > 0 && copyArr[j] < copyArr[j - 1]; j--)
+			for(int j = i; j > 0 && nums[j] < nums[j - 1]; j--)
 			{
 				//swaps the two elements
-				int temp = copyArr[j];
-				copyArr[j] = copyArr[j - 1];
-				copyArr[j - 1] = temp;
+				int temp = nums[j];
+				nums[j] = nums[j - 1];
+				nums[j - 1] = temp;
 			}
 		}
 		
-		//makes nums equal to copyArr and returns it
-		nums = copyArr;
+		//returns nums;
 		return nums;
 	}
 }
