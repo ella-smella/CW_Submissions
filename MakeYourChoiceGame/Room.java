@@ -1,9 +1,8 @@
 /**
  * This class contains methods to represent each of the 20 rooms in the Make Your Choice Game Project.
- * The class also includes other methods that makes a list of availble characters for selection. 
+ * The class also includes two methods that makes a list of availble characters for selection. 
  * The first method allows the user to meet the friends they have available and haven't met before. 
  * The second allows the user to select a friend that is still alive which is used during in-game decisions. 
- * The third returns the number of friends that are still alive
  * This class also creates and contains the objects that represent the 10 indiviual NPCs. 
  */
 
@@ -746,7 +745,7 @@ public class Room {
 		String monty = "\033[38;5;81m\033[3m";
 		
 		//print statements introducing the user to the room and monty, who prompts the user for a response
-		System.out.println("You see three doors lined up. None of them have the same exit sign as before. You consider walking up to one of the doors and opening it at random until a robotic voice speaks up."
+		System.out.println("You see three doors lined up. None of them have the same exit sign as before. You consider walking up to one of the doors and opening it at random until a robotic voice speaks up.\n"
 				+ "His voice sounds eerily familiar and it has a slight echo.");
 		System.out.println(monty + "\"STOP! Don’t open those doors yet, friend! I still have to explain the RULES, silly!\"" + normal);
 		System.out.println("A TV with legs appears from seemingly nowhere. On its screen is a yellow smiley face whose mouth flaps open and close as it speaks. As he does, a fun little jingle plays.");
@@ -3459,6 +3458,12 @@ public class Room {
 	
 	public static void roomTwenty()
 	{
+		System.out.println("""
+				wow you made it to the end of the game! sike! i'm not finished... the endings will be much doper than this tho swear 
+				maybe after break it'll be finished... we'll see. consider this a little beta test :3
+				so far you've played like 2/5 of the game and met 1/2 of the characters so look forward to more please :'(
+				""");
+		
 		//Closes the scanner so that it doesn't drain my computer of its life in a similar way that coding drains me of my life
 		myReader.close();
 	}
